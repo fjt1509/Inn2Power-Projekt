@@ -6,7 +6,7 @@
 package db.inn2power.gui.controller;
 
 import db.inn2power.bll.exception.Inn2PowerException;
-import db.inn2power.dal.CompanyDAO;
+import db.inn2power.dal.CompanyDAL;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -56,7 +56,7 @@ public class CreateCompanyWindowController implements Initializable {
     @FXML
     private void eventCreateCompanybtn(ActionEvent event) throws IOException, SQLException, Inn2PowerException 
     {
-        CompanyDAO companydao = new CompanyDAO();
+        CompanyDAL companydao = new CompanyDAL();
         
         String name = txtName.getText();
         String adress = txtAdress.getText();

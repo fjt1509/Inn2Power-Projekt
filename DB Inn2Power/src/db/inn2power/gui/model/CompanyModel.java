@@ -49,7 +49,7 @@ public class CompanyModel
         List<be.Company> allCompanies = companyDAO.getAllCompanies();
         List<be.Company> searchResults = companySearcher.searchByCompanyName(allCompanies, searchText);
         companiesInView.clear();
-        //companiesInView.addAll(searchResults)
+        //companiesInView.addAll(searchResults);
     }
     
     public void createCompany(String name)

@@ -20,12 +20,12 @@ import java.util.List;
  *
  * @author pgn
  */
-public class CompanyDAO
+public class CompanyDAL
 {
 
     private DataBaseConnector dbConnector;
 
-    public CompanyDAO() throws IOException
+    public CompanyDAL() throws IOException
     {
         dbConnector = new DataBaseConnector();
     }

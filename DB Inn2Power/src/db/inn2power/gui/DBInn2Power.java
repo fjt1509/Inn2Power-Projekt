@@ -6,7 +6,7 @@
 package db.inn2power.gui;
 
 import db.inn2power.be.Company;
-import db.inn2power.dal.CompanyDAO;
+import db.inn2power.dal.CompanyDAL;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -39,7 +39,7 @@ public class DBInn2Power extends Application
      */
     public static void main(String[] args) throws SQLException, IOException
     {
-
+        
         
         launch(args);
     }
