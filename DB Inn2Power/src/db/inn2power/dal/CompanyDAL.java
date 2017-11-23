@@ -15,6 +15,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -129,6 +131,18 @@ public class CompanyDAL
         //I create the company object and add it to my list of results:
         Company company = new Company(id, name, country, address, business, supply, business, lat, lng, isSME);
         return company;
+    }
+
+    public void remove(Company company) 
+    {
+            try (Connection con = dbConnector.getConnection();) 
+        {
+            Statement stmt = con.createStatement();
+            stmt.execute("DELETE FROM Company WHERE id="+company.getId());
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(CompanyDAL.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }

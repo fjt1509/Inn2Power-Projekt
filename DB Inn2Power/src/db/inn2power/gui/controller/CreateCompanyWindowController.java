@@ -7,6 +7,7 @@ package db.inn2power.gui.controller;
 
 import db.inn2power.bll.exception.Inn2PowerException;
 import db.inn2power.dal.CompanyDAL;
+import db.inn2power.gui.model.CompanyModel;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -14,9 +15,13 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -44,7 +49,13 @@ public class CreateCompanyWindowController implements Initializable {
     @FXML
     private TextField txtLng;
     @FXML
-    private CheckBox cboxSME;
+    private RadioButton cboxSMEYes;
+    @FXML
+    private RadioButton cboxSMENo;
+    @FXML
+    private ToggleGroup SME;
+    @FXML
+    private Button createcompany;
     /**
      * Initializes the controller class.
      */
@@ -56,7 +67,7 @@ public class CreateCompanyWindowController implements Initializable {
     @FXML
     private void eventCreateCompanybtn(ActionEvent event) throws IOException, SQLException, Inn2PowerException 
     {
-        CompanyDAL companydao = new CompanyDAL();
+        CompanyModel companyModel = new CompanyModel();
         
         String name = txtName.getText();
         String adress = txtAdress.getText();
@@ -68,21 +79,22 @@ public class CreateCompanyWindowController implements Initializable {
         double lng = Integer.parseInt(txtLng.getText());
         int sme;
         
-        if (cboxSME.isSelected())
+        if (cboxSMEYes.isSelected())
         {
             sme = 1;
-        }else
+        if (cboxSMENo.isSelected())
+        {
+            sme = -1;
+        } else 
         {
             sme = 0;
-        } 
+        }
         
-        companydao.createCompany(name, adress, country, website, supplyChainCat, businessRole, lat, lng, sme);     
+        companyModel.createCompany(name, adress, country, website, supplyChainCat, businessRole, lat, lng, sme);  
+        
+        Stage stage = (Stage) createcompany.getScene().getWindow();
+        stage.close();
+        
+    }    
     }
-
-    @FXML
-    private void eventToggleSMEcBox(ActionEvent event) {
-    }
-
-
-    
 }

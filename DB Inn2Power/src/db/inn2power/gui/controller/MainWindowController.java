@@ -8,8 +8,10 @@ package db.inn2power.gui.controller;
 import db.inn2power.be.Company;
 import db.inn2power.bll.exception.Inn2PowerException;
 import db.inn2power.gui.model.CompanyModel;
+
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +24,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -38,11 +42,17 @@ public class MainWindowController implements Initializable
     private CompanyModel companyModel;
     @FXML
     private TextField txtQurry;
+    @FXML
+    private RadioButton radbtnName;
+    @FXML
+    private ToggleGroup searchGroup;
+    @FXML
+    private RadioButton radbtnCountry;
 
-    public MainWindowController() throws Inn2PowerException, IOException
+    public MainWindowController() throws Inn2PowerException, IOException, SQLException
     {
      
-            companyModel = new CompanyModel();
+        companyModel = new CompanyModel();
      
     }
     
@@ -63,23 +73,44 @@ public class MainWindowController implements Initializable
         stage.setScene(new Scene(root1)); 
         stage.show();
         
-        
-        
-        
+            
     }
 
     @FXML
-    private void handleSearch(ActionEvent event) {
-            {   
-        
-        String searchText = txtQurry.getText().trim();
-        if(!searchText.isEmpty())
+    private void handleSearch(ActionEvent event) throws SQLException 
+    {
+            
+        if (radbtnName.isSelected())
         {
-            companyModel.search(searchText);     
-        }
+            String searchText = txtQurry.getText().trim();
+            if(!searchText.isEmpty())
+            {
+                companyModel.searchByName(searchText);     
+            }
+        } 
+        if (radbtnCountry.isSelected())
+        {
+            String searchText = txtQurry.getText().trim();
+            if(!searchText.isEmpty())
+            {
+                companyModel.searchByCountry(searchText);
+            }
+        }    
+        
     }
 
 
+    @FXML
+    private void eventDeleteCompanyBtn(ActionEvent event) 
+    {
+        Company selectCompany = lstCompanies.getSelectionModel().getSelectedItem();
+        companyModel.remove(selectCompany);
+    }
+
+    @FXML
+    private void eventRefreshListBten(ActionEvent event) 
+    {
+        lstCompanies.setItems(companyModel.getAllCompanies());
     }
 }
 

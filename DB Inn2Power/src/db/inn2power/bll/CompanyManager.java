@@ -45,4 +45,14 @@ public class CompanyManager
         }
     }
 
+    public void remove(Company company)
+    {
+        companyDAO.remove(company);
+    }
+
+    public void createCompany(String name, String adress, String country, String website, String supplyChainCat, String businessRole, double lat, double lng, int sme) throws SQLException 
+    {
+        companyDAO.createCompany(name, adress, country, website, supplyChainCat, businessRole, lat, lng, sme);
+    }
+
 }

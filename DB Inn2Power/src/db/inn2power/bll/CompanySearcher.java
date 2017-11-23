@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package db.inn2power.BLL;
+package db.inn2power.bll;
 
-import be.Company;
+
+import db.inn2power.be.Company;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,20 @@ public class CompanySearcher
         }
         return searchResult;
         
+    }
+    
+    public List<Company> searchByCompanyCoutnry(List<Company> companies, String query)
+    {
+        List<Company> searchResult = new ArrayList<Company>();
+        
+        for (Company company : companies)
+        {
+            if(company.getCountry().toLowerCase().contains(query.toLowerCase()));
+            {
+                searchResult.add(company);
+            }
+        }
+        return searchResult;
     }
     
     
