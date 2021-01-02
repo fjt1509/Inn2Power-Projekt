@@ -18,41 +18,38 @@ import java.util.logging.Logger;
  *
  * @author pgn
  */
-public class CompanyManager
-{
+public class CompanyManager {
 
-    private CompanyDAL companyDAO;
+	private CompanyDAL companyDAO;
 
-    public CompanyManager() throws Inn2PowerException
-    {
-        try
-        {
-            companyDAO = new CompanyDAL();
-        } catch (IOException ex)
-        {
-            throw new Inn2PowerException(ex);
-        }
-    }
+	public CompanyManager() throws Inn2PowerException {
+		try {
+			companyDAO = new CompanyDAL();
+		} catch (IOException ex) {
+			throw new Inn2PowerException(ex);
+		}
+	}
 
-    public List<Company> getAllCompanies() throws Inn2PowerException
-    {
-        try
-        {
-          return companyDAO.getAllCompanies();
-        } catch (SQLException ex)
-        {
-            throw new Inn2PowerException(ex);
-        }
-    }
+	public CompanyManager(CompanyDAL dal) {
+		this.companyDAO = dal;
 
-    public void remove(Company company)
-    {
-        companyDAO.remove(company);
-    }
+	}
 
-    public void createCompany(String name, String adress, String country, String website, String supplyChainCat, String businessRole, double lat, double lng, int sme) throws SQLException 
-    {
-        companyDAO.createCompany(name, adress, country, website, supplyChainCat, businessRole, lat, lng, sme);
-    }
+	public List<Company> getAllCompanies() throws Inn2PowerException {
+		try {
+			return companyDAO.getAllCompanies();
+		} catch (SQLException ex) {
+			throw new Inn2PowerException(ex);
+		}
+	}
+
+	public void remove(Company company) {
+		companyDAO.remove(company);
+	}
+
+	public void createCompany(String name, String adress, String country, String website, String supplyChainCat,
+			String businessRole, double lat, double lng, int sme) throws SQLException {
+		companyDAO.createCompany(name, adress, country, website, supplyChainCat, businessRole, lat, lng, sme);
+	}
 
 }

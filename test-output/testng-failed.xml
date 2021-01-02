@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="db.inn2power.TestNG.MyFirstTest">
+      <class name="TestNG.RandomTests">
         <methods>
-          <include name="f"/>
+          <include name="expectedException_TestNG"/>
         </methods>
-      </class> <!-- db.inn2power.TestNG.MyFirstTest -->
+      </class> <!-- TestNG.RandomTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

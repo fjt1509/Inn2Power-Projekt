@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-29T20:35:32 CET" name="Default suite" finished-at="2020-12-29T20:35:32 CET" duration-ms="56">
+  <suite started-at="2021-01-02T09:27:56 CET" name="Default suite" finished-at="2021-01-02T09:27:57 CET" duration-ms="84">
     <groups>
     </groups>
-    <test started-at="2020-12-29T20:35:32 CET" name="Default test" finished-at="2020-12-29T20:35:32 CET" duration-ms="56">
-      <class name="db.inn2power.TestNG.MyFirstTest">
-        <test-method signature="f()[pri:0, instance:db.inn2power.TestNG.MyFirstTest@1356d4d4]" started-at="2020-12-29T20:35:32 CET" name="f" finished-at="2020-12-29T20:35:32 CET" duration-ms="11" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2021-01-02T09:27:56 CET" name="Default test" finished-at="2021-01-02T09:27:57 CET" duration-ms="84">
+      <class name="TestNG.RandomTests">
+        <test-method signature="expectedException_TestNG()[pri:0, instance:TestNG.RandomTests@7671cb68]" started-at="2021-01-02T09:27:57 CET" name="expectedException_TestNG" finished-at="2021-01-02T09:27:57 CET" duration-ms="12" status="PASS">
+          <exception class="java.lang.NumberFormatException">
             <message>
-              <![CDATA[expected [TestNG is working fine] but found [TestNG is working fine1]]]>
+              <![CDATA[For input string: "one"]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [TestNG is working fine] but found [TestNG is working fine1]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at db.inn2power.TestNG.MyFirstTest.f(MyFirstTest.java:12)
+              <![CDATA[java.lang.NumberFormatException: For input string: "one"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+at java.base/java.lang.Integer.parseInt(Integer.java:652)
+at java.base/java.lang.Integer.parseInt(Integer.java:770)
+at TestNG.RandomTests.expectedException_TestNG(RandomTests.java:23)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,11 +48,29 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NumberFormatException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- db.inn2power.TestNG.MyFirstTest -->
+        </test-method> <!-- expectedException_TestNG -->
+        <test-method signature="timeOut_TestNG()[pri:0, instance:TestNG.RandomTests@7671cb68]" started-at="2021-01-02T09:27:57 CET" name="timeOut_TestNG" finished-at="2021-01-02T09:27:57 CET" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- timeOut_TestNG -->
+      </class> <!-- TestNG.RandomTests -->
+      <class name="TestNG.DependencyTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestNG.DependencyTest@49dc7102]" started-at="2021-01-02T09:27:57 CET" name="beforeClass" finished-at="2021-01-02T09:27:57 CET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="searchByCompanyName()[pri:0, instance:TestNG.DependencyTest@49dc7102]" started-at="2021-01-02T09:27:57 CET" name="searchByCompanyName" finished-at="2021-01-02T09:27:57 CET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchByCompanyName -->
+        <test-method signature="stopSearchByCompanyName()[pri:0, instance:TestNG.DependencyTest@49dc7102]" started-at="2021-01-02T09:27:57 CET" name="stopSearchByCompanyName" finished-at="2021-01-02T09:27:57 CET" depends-on-methods="TestNG.DependencyTest.searchByCompanyName" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopSearchByCompanyName -->
+      </class> <!-- TestNG.DependencyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
