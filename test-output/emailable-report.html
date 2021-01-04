@@ -9,18 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">97</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">84</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">TestNG.DataDriven</td><td><a href="#m0">userLoginTest</a></td><td rowspan="1">1609519775750</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestNG.DataDriven</td><td><a href="#m1">f</a></td><td rowspan="3">1609519775744</td><td rowspan="3">1</td></tr><tr class="passedeven"><td><a href="#m2">f</a></td></tr><tr class="passedeven"><td><a href="#m3">f</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestNG.DependencyTest</td><td><a href="#m0">searchByCompanyName</a></td><td rowspan="1">1609576077074</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m1">stopSearchByCompanyName</a></td><td rowspan="1">1609576077079</td><td rowspan="1">2</td></tr><tr class="passedodd"><td rowspan="2">TestNG.RandomTests</td><td><a href="#m2">expectedException_TestNG</a></td><td rowspan="1">1609576077040</td><td rowspan="1">12</td></tr><tr class="passedodd"><td><a href="#m3">timeOut_TestNG</a></td><td rowspan="1">1609576077058</td><td rowspan="1">11</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">TestNG.DataDriven#userLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.io.FileNotFoundException: ..\companies.csv (The system cannot find the file specified)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:145)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+<h2>Default test</h2><h3 id="m0">TestNG.DependencyTest#searchByCompanyName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestNG.DependencyTest#stopSearchByCompanyName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestNG.RandomTests#expectedException_TestNG</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">java.lang.NumberFormatException: For input string: &quot;one&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at TestNG.RandomTests.expectedException_TestNG(RandomTests.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -40,24 +48,7 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.io.FileNotFoundException: ..\companies.csv (The system cannot find the file specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:153)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:108)
-	at java.base/java.io.FileReader.&lt;init&gt;(FileReader.java:60)
-	at TestNG.DataDriven.provider(DataDriven.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:76)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-	... 25 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestNG.DataDriven#f</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>Banana</td><td>1</td><td>[Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestNG.DataDriven#f</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>Apple</td><td>2</td><td>[Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestNG.DataDriven#f</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>InvalidName</td><td>0</td><td>[Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestNG.RandomTests#timeOut_TestNG</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

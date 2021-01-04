@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-skipped">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\fjt15\AppData\Local\Temp\testng-eclipse--419184256\testng-customsuite.xml</span>
+                    <span>C:\Users\Hussain\AppData\Local\Temp\testng-eclipse-388176901\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,  1 skipped,  3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods skipped suite-Default_suite"> (hide)</a> <!-- hide-methods skipped suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods skipped suite-Default_suite"> (show)</a> <!-- show-methods skipped suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Default_suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DataDriven" class="method navigator-link" hash-for-method="userLoginTest">userLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Default_suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,17 +104,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DataDriven" class="method navigator-link" hash-for-method="f(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChain...)">f(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChain...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestNG.RandomTests" class="method navigator-link" hash-for-method="expectedException_TestNG">expectedException_TestNG</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DataDriven" class="method navigator-link" hash-for-method="f(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainC...)">f(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainC...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DependencyTest" class="method navigator-link" hash-for-method="searchByCompanyName">searchByCompanyName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DataDriven" class="method navigator-link" hash-for-method="f(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supply...)">f(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supply...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestNG.DependencyTest" class="method navigator-link" hash-for-method="stopSearchByCompanyName">stopSearchByCompanyName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestNG.RandomTests" class="method navigator-link" hash-for-method="timeOut_TestNG">timeOut_TestNG</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -143,93 +134,46 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">TestNG.DataDriven</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="userLoginTest">
-                  </a> <!-- userLoginTest -->
-                  <span class="method-name">userLoginTest</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.io.FileNotFoundException: ..\companies.csv (The system cannot find the file specified)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:145)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:797)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.io.FileNotFoundException: ..\companies.csv (The system cannot find the file specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:153)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:108)
-	at java.base/java.io.FileReader.&lt;init&gt;(FileReader.java:60)
-	at TestNG.DataDriven.provider(DataDriven.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:76)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-	... 25 more
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestNG.DataDriven</span>
+              <span class="class-name">TestNG.RandomTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChain...)">
-                  </a> <!-- f(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChain...) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}])</span>
+                  <a name="expectedException_TestNG">
+                  </a> <!-- expectedException_TestNG -->
+                  <span class="method-name">expectedException_TestNG</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="f(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainC...)">
-                  </a> <!-- f(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainC...) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}])</span>
+                  <a name="timeOut_TestNG">
+                  </a> <!-- timeOut_TestNG -->
+                  <span class="method-name">timeOut_TestNG</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestNG.DependencyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByCompanyName">
+                  </a> <!-- searchByCompanyName -->
+                  <span class="method-name">searchByCompanyName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="f(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supply...)">
-                  </a> <!-- f(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supply...) -->
-                  <span class="method-name">f</span>
-                  <span class="parameters">(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=2, name=AppleJuiceCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}, Company{id=3, name=BananaCompany, country=null, address=null, website=null, supplyChainCategoriy=null, buisnessRole=null, lat=0.0, lng=0.0, isSME=0}])</span>
+                  <a name="stopSearchByCompanyName">
+                  </a> <!-- stopSearchByCompanyName -->
+                  <span class="method-name">stopSearchByCompanyName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -237,7 +181,7 @@ Caused by: java.io.FileNotFoundException: ..\companies.csv (The system cannot fi
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\fjt15\AppData\Local\Temp\testng-eclipse--419184256\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Hussain\AppData\Local\Temp\testng-eclipse-388176901\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -246,7 +190,8 @@ Caused by: java.io.FileNotFoundException: ..\companies.csv (The system cannot fi
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestNG.DataDriven&quot;/&gt;
+      &lt;class name=&quot;TestNG.RandomTests&quot;/&gt;
+      &lt;class name=&quot;TestNG.DependencyTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -260,7 +205,7 @@ Caused by: java.io.FileNotFoundException: ..\companies.csv (The system cannot fi
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -288,26 +233,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f')
-data.setCell(0, 2, 'TestNG.DataDriven')
-data.setCell(0, 3, 6);
+data.setCell(0, 1, 'expectedException_TestNG')
+data.setCell(0, 2, 'TestNG.RandomTests')
+data.setCell(0, 3, 12);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'f')
-data.setCell(1, 2, 'TestNG.DataDriven')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'timeOut_TestNG')
+data.setCell(1, 2, 'TestNG.RandomTests')
+data.setCell(1, 3, 11);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'f')
-data.setCell(2, 2, 'TestNG.DataDriven')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'searchByCompanyName')
+data.setCell(2, 2, 'TestNG.DependencyTest')
+data.setCell(2, 3, 2);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'userLoginTest')
-data.setCell(3, 2, 'TestNG.DataDriven')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'stopSearchByCompanyName')
+data.setCell(3, 2, 'TestNG.DependencyTest')
+data.setCell(3, 3, 2);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 ms</span>
+              <span class="suite-total-time">Total running time: 27 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -322,9 +267,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestNG.RandomTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ignoreTest_TestNG</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -333,67 +285,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestNG.DataDriven</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
+              <div class="chronological-class-name">TestNG.RandomTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">expectedException_TestNG</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">7 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">timeOut_TestNG</span>
+                <span class="method-start">18 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.DependencyTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">32 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">84 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">f(Apple, 2, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChainC...)</span>
-                <span class="method-start">85 ms</span>
+                <span class="method-name">searchByCompanyName</span>
+                <span class="method-start">34 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">93 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">93 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">f(Banana, 1, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supplyChain...)</span>
-                <span class="method-start">93 ms</span>
+                <span class="method-name">stopSearchByCompanyName</span>
+                <span class="method-start">39 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">95 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">95 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">f(InvalidName, 0, [Company{id=1, name=AppleComputers, country=null, address=null, website=null, supply...)</span>
-                <span class="method-start">95 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">97 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">101 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">103 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">151 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

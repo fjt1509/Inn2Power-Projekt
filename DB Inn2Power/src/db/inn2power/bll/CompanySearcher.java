@@ -31,6 +31,10 @@ public class CompanySearcher
         
     }
     
+    public void stopSearchByCompanyName() {
+    	// Bla bla 
+    }
+    
     public List<Company> searchByCompanyCoutnry(List<Company> companies, String query)
     {
         List<Company> searchResult = new ArrayList<Company>();
@@ -44,6 +48,7 @@ public class CompanySearcher
         }
         return searchResult;
     }
+    
     
     
     
