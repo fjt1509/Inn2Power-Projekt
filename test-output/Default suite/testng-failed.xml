@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="db.inn2power.TestNG.MyFirstTest">
+      <class name="TestNG.DataDriven">
         <methods>
-          <include name="f"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+          <include name="userLoginTest"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- db.inn2power.TestNG.MyFirstTest -->
+      </class> <!-- TestNG.DataDriven -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

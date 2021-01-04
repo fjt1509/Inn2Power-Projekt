@@ -1,4 +1,4 @@
-package db.inn2power.TestNG;
+package TestNG;
 
 import org.testng.annotations.Test;
 	import static org.testng.Assert.assertEquals;
